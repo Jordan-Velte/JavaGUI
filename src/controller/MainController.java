@@ -6,8 +6,9 @@ import model.Auto;
 import view.MainWindow;
 
 public class MainController {
-
+    //Hauptfenster
     MainWindow _mainWindow;
+
     ArrayList<Auto> _autos;
 
 
