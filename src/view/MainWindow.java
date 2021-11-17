@@ -38,6 +38,7 @@ public class MainWindow {
         
 
         _createCar = new JButton("Neues Auto");
+        //Bereiche, die der Button an Grenzen hat
         _createCar.setBounds(0,0,0,0);
         _createCar.addActionListener(new createCarListener());
 
