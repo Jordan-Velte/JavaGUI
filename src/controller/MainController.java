@@ -24,7 +24,7 @@ public class MainController {
         getMainWindow().toggleMainWindow();
     }
 
-    //Öffnet und schließt Fenster --> Wechsel der Ansicht
+    //Öffnet und schließt Fenster --> Wechsel der Ansicht!
     public void changeView(String target){
         System.out.println("Ansicht wechseln auf: " + target);
 
