@@ -17,13 +17,15 @@ public class MainWindow {
 
     MainController _mc;
 
+    //Hauptfenster
     public MainWindow(MainController mc){
         setMainController(mc);
-        // Neues Hauptfenster erstellen
+        // Neues Hauptfenster erstellen. Gleiches Prinzip wie Zeile 28 NewCarWindow.java: setMainFrame(new JFrame());
         _mainFrame = new JFrame();
-        
+        //Titel des Frames
+        getMainFrame().setTitle("Hauptfenster");
         // Breite und Höhe des Fensters setzen
-        _mainFrame.setSize(600,400);
+        _mainFrame.setSize(700,700);
         createMainOverview();
 
         // Standard-Operation, wenn das Fenster geschlossen wird
@@ -39,7 +41,7 @@ public class MainWindow {
 
         _createCar = new JButton("Neues Auto");
         //Bereiche, die der Button an Grenzen hat
-        _createCar.setBounds(0,0,0,0);
+        _createCar.setBounds(10,10,10,10);
         _createCar.addActionListener(new createCarListener());
 
         DefaultTableModel model = new DefaultTableModel(); 
@@ -48,7 +50,7 @@ public class MainWindow {
         // Create a couple of columns 
         model.addColumn("Marke"); 
         model.addColumn("PS"); 
-        model.addColumn("Typ"); 
+        model.addColumn("Modell"); 
 
         getMainPanel().add(getCarTable());
         getMainPanel().add(_createCar);

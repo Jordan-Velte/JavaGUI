@@ -31,7 +31,7 @@ public class NewCarWindow {
         // Eingabefelder für das Auto erstellen
         JLabel l_marke = new JLabel("Marke");
         getMainPanel().add(l_marke);
-        // Textfeld erstellen
+        // Textfeld erstellen. Die 15 gibt die Länge des Textfeldes an
         _tf_marke = new JTextField("", 15);
         // Textfeld dem Panel hinzufügen
         getMainPanel().add(_tf_marke);
@@ -45,7 +45,7 @@ public class NewCarWindow {
         getMainPanel().add(_tf_ps);
 
         // Eingabefelder für das Auto erstellen
-        JLabel l_typ = new JLabel("Typ");
+        JLabel l_typ = new JLabel("Modell");
         getMainPanel().add(l_typ);
         // Textfeld erstellen
         _tf_typ = new JTextField("", 15);
@@ -55,11 +55,12 @@ public class NewCarWindow {
 
         _addCarBtn = new JButton("Auto speichern");
         _addCarBtn.setBounds(0,0,0,0);
+        //Woher kommt diese Methode? Unten! Aber nochmal Prinzip der Listener erklären lassen
         _addCarBtn.addActionListener(new saveCarListener());
         getMainPanel().add(_addCarBtn);
 
         // Breite und Höhe des Fensters setzen
-        getMainFrame().setSize(900,300);
+        getMainFrame().setSize(700,400);
 
         // Fenster anzeigen
         getMainFrame().setVisible(true);

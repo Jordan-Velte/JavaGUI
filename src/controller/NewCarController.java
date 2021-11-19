@@ -16,6 +16,7 @@ public class NewCarController {
 
     public void addNewCar(String marke, String ps, String typ){
         // Neues Objekt vom Typ Auto erstellen und dieses dem Maincontroller mitgeben
+        //Integer.parseInt --> Konvertiert den eingebenen Text von dem Terminal von String zu integer
         Auto a = new Auto(marke, Integer.parseInt(ps), typ);
         getMainController().addNewCar(a);
 
